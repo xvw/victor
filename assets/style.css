@@ -231,6 +231,17 @@ footer a:hover {
     color: #F5E9CE;
 }
 
+.iban {
+    margin: 32px 12px;
+}
+
+.iban code {
+    background-color:  #292929;
+    padding: 4px;
+    border-radius: 4px;
+    color: #F5E9CE;
+}
+
 
 
 .blk {
