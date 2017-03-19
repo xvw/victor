@@ -13,6 +13,9 @@ html {
   font-size: calc(1em * 0.625);
 }
 
+a {  color: #7F796B; }
+a:hover { color: #948D7C; }
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -47,12 +50,36 @@ h4, .h4-like { font-size: 1.8rem; }
     padding: 6px;
     background-color: #292929;
     color: #FFF;
+    text-align: center;
+    opacity: 0.8;
+    font-weight: 800;
+}
+
+
+#top-bar > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#top-bar > ul > li {
+    list-style: none;
+}
+
+#top-bar > ul > li > a {
+    color: #F5F0EB;
+    text-decoration: none;
 }
 
 main {
     margin-top: 70%;
     flex: 1;
-    padding: 32px;
+    padding-top: 32px;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: 'Droid Serif', serif;
 }
 
 header {
@@ -67,6 +94,12 @@ header {
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
+}
+
+header img {
+    width: 120px;
+    margin: auto;
+    border-radius: 50%;
 }
 
 header > * {
@@ -86,7 +119,7 @@ header > .main-title {
     flex-direction: column;
 }
 
-header > .main-title > div { margin: auto; }
+header > .main-title > div { margin: auto; text-align: center; }
 header > .main-title > div > * { text-align: center; }
 
 
@@ -102,13 +135,72 @@ header > .main-title > div > h2 {
     font-size: 2.8rem;
 }
 
-main > .content {
+main h1, main h2, main h3, main h4 {
     width: 100%;
     max-width: 800px;
+    margin: 32px auto;
+}
+
+main > .content {
+    width: 100%;
     margin: auto;
+    padding: 12px;
+}
+
+main > .content p {
+    width: 100%;
+    max-width: 800px;
+    margin: 24px auto;
+}
+
+.submenu {
+    width: 100%;
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 64px 0;
+}
+
+.bgized {
+    background-color: #F5F0EB;
 }
 
 footer {
     background-color: #292929;
     padding: 32px;
+    color: #FFF;
+    position: relative;
+}
+
+footer h3 {
+    color: #DBD0B8;
+}
+
+footer a {
+    color: #DBD0B8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F5E9CE;
+}
+
+
+
+.blk {
+    display: none;
+}
+
+
+@media screen and (max-width: 640px) {
+    #top-bar > ul {
+	flex-direction: column;
+	justify-content: center;
+    }
+    header > .main-title > div > h1 {
+	font-size: 3.0rem;
+    }
+
+    header > .main-title > div > h2 {
+	font-size: 1.8rem;
+    }
 }
