@@ -26,7 +26,12 @@ body {
     font-weight: 400;
     height: 100vh;
     color: #000;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
     font-size: 1.4rem;
     background-color: #fff;
@@ -48,11 +53,18 @@ h4, .h4-like { font-size: 1.8rem; }
     position: fixed;
     top: 0; left: 0; right: 0;
     padding: 18px;
-    background-color: #292929;
-    color: #FFF;
+    min-height: 64px;
+    /* background-color: #292929; */
+    background-color: #FFF;
+    color: #000;
     text-align: center;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     font-weight: 800;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
 }
 
 
@@ -60,6 +72,10 @@ h4, .h4-like { font-size: 1.8rem; }
     width: 100%;
     max-width: 800px;
     margin: auto;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
     justify-content: space-around;
 }
@@ -69,12 +85,12 @@ h4, .h4-like { font-size: 1.8rem; }
 }
 
 #top-bar > ul > li > a {
-    color: #F5F0EB;
+    color: #292929;
     text-decoration: none;
 }
 
 main {
-    margin-top: 70vh;
+    margin-top: 80vh;
     flex: 1;
     padding-top: 32px;
 }
@@ -88,13 +104,14 @@ p {
 
 header {
     position: absolute;
-    top: 0;
-    bottom: 30vh;
+    top: 64px;
+    bottom: 20vh;
     left: 0;
     right: 0;
     background-color: black;
     background-image: url(cover.jpg);
     background-size: cover;
+    background-origin: content-box;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
@@ -119,7 +136,12 @@ header > * {
 
 header > .main-title {
     z-index: 100;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -235,6 +257,10 @@ footer a:hover {
     margin: 32px 12px;
 }
 
+.iban li {
+    margin: 4px;
+}
+
 .iban code {
     background-color:  #292929;
     padding: 4px;
@@ -250,9 +276,16 @@ footer a:hover {
 
 
 @media screen and (max-width: 640px) {
+    #top-bar {
+	min-height: 120px;
+    }
     #top-bar > ul {
+	-ms-flex-direction: column;
 	flex-direction: column;
 	justify-content: center;
+    }
+    header {
+	top: 120px;
     }
     header > .main-title > div > h1 {
 	font-size: 3.0rem;
