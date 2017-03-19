@@ -74,7 +74,7 @@ h4, .h4-like { font-size: 1.8rem; }
 }
 
 main {
-    margin-top: 70%;
+    margin-top: 70vh;
     flex: 1;
     padding-top: 32px;
 }
@@ -89,7 +89,7 @@ p {
 header {
     position: absolute;
     top: 0;
-    bottom: 30%;
+    bottom: 30vh;
     left: 0;
     right: 0;
     background-color: black;
