@@ -47,7 +47,7 @@ h4, .h4-like { font-size: 1.8rem; }
     z-index: 1000;
     position: fixed;
     top: 0; left: 0; right: 0;
-    padding: 6px;
+    padding: 18px;
     background-color: #292929;
     color: #FFF;
     text-align: center;
@@ -58,6 +58,8 @@ h4, .h4-like { font-size: 1.8rem; }
 
 #top-bar > ul {
     width: 100%;
+    max-width: 800px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
@@ -156,8 +158,40 @@ main > .content p {
 .submenu {
     width: 100%;
     max-width: 800px;
-    margin: 32px auto;
-    padding: 64px 0;
+    margin: 20px auto;
+    padding: 12px 0;
+}
+
+.submenu > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.submenu > ul > li {
+    list-style: none;
+    margin: 24px;
+    display: block;
+    background-color: #F5F0EB;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.submenu > ul > li:nth-child(1),
+.submenu > ul > li:nth-child(3)
+{
+    margin-left: 68px;
+}
+
+.submenu > ul > li:nth-child(2),
+.submenu > ul > li:nth-child(4) {
+    margin-right: 68px;
+}
+
+.submenu > ul > li > a {
+    display: block;
+    text-decoration: none;
 }
 
 .bgized {
@@ -169,6 +203,13 @@ footer {
     padding: 32px;
     color: #FFF;
     position: relative;
+    margin-top: 64px;
+}
+
+footer > div {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 footer h3 {
