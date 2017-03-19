@@ -79,9 +79,11 @@ main {
     padding-top: 32px;
 }
 
+.paragraphized-ul,
 p {
     font-size: 1.8rem;
     font-family: 'Droid Serif', serif;
+    line-height: 1.6;
 }
 
 header {
@@ -149,17 +151,21 @@ main > .content {
     padding: 12px;
 }
 
+.paragraphized-ul,
 main > .content p {
     width: 100%;
     max-width: 800px;
     margin: 24px auto;
 }
 
+.paragraphized-ul > li {
+    margin: 12px;
+}
+
 .submenu {
     width: 100%;
     max-width: 800px;
-    margin: 20px auto;
-    padding: 12px 0;
+    margin: 22px auto;
 }
 
 .submenu > ul {
