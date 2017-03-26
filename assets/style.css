@@ -34,14 +34,17 @@ body {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
     /* OLD - Firefox 19- (buggy but mostly works) */
+    /*
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
     /* NEW - Chrome */
+    /*
     display: flex;
     -ms-flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+    */
     font-size: 14px;
     font-size: 1.4rem;
     background-color: #fff;
