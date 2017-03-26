@@ -3,4 +3,5 @@
   var vh   = window.innerHeight + 'px';
   console.log(['retreive body:', body, 'with size:', vh]);
   body.style.height = vh;
+  alert("update !")
 })();
