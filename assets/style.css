@@ -1,24 +1,29 @@
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-size: 62.5%;
-  font-size: calc(1em * 0.625);
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    font-size: calc(1em * 0.625);
 }
 
-a {  color: #7F796B; }
-a:hover { color: #948D7C; }
+a {
+    color: #7F796B;
+}
+
+a:hover {
+    color: #948D7C;
+}
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 body {
@@ -26,13 +31,18 @@ body {
     font-weight: 400;
     height: 100vh;
     color: #000;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    /* NEW - Chrome */
     display: flex;
     -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    font-size: 14px;
     font-size: 1.4rem;
     background-color: #fff;
     font-family: 'Droid Sans', sans-serif;
@@ -43,15 +53,36 @@ body {
     font-family: 'Droid Serif', serif;
 }
 
-h1, .h1-like { font-size: 2.8rem; }
-h2, .h2-like { font-size: 2.4rem; }
-h3, .h3-like { font-size: 2rem; }
-h4, .h4-like { font-size: 1.8rem; }
+h1,
+.h1-like {
+    font-size: 28px;
+    font-size: 2.8rem;
+}
+
+h2,
+.h2-like {
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+
+h3,
+.h3-like {
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+h4,
+.h4-like {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
 
 #top-bar {
     z-index: 1000;
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 18px;
     min-height: 64px;
     /* background-color: #292929; */
@@ -60,43 +91,50 @@ h4, .h4-like { font-size: 1.8rem; }
     text-align: center;
     /* opacity: 0.8; */
     font-weight: 800;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    /* NEW - Chrome */
     display: flex;
 }
 
-
-#top-bar > ul {
+#top-bar>ul {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    /* NEW - Chrome */
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
-#top-bar > ul > li {
+#top-bar>ul>li {
     list-style: none;
 }
 
-#top-bar > ul > li > a {
+#top-bar>ul>li>a {
     color: #292929;
     text-decoration: none;
 }
 
 main {
     margin-top: 80vh;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     padding-top: 32px;
 }
 
 .paragraphized-ul,
 p {
+    font-size: 18px;
     font-size: 1.8rem;
     font-family: 'Droid Serif', serif;
     line-height: 1.6;
@@ -123,64 +161,82 @@ header img {
     border-radius: 50%;
 }
 
-header > * {
+header>* {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .alpha-color {
     background-color: #5B7876;
     opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     z-index: 0;
 }
 
-header > .main-title {
+header>.main-title {
     z-index: 100;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    /* NEW - Chrome */
     display: flex;
     -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
 }
 
-header > .main-title > div { margin: auto; text-align: center; }
-header > .main-title > div > * { text-align: center; }
+header>.main-title>div {
+    margin: auto;
+    text-align: center;
+}
 
+header>.main-title>div>* {
+    text-align: center;
+}
 
-header > .main-title > div > h1,
-header > .main-title > div > h2 {
+header>.main-title>div>h1,
+header>.main-title>div>h2 {
     color: white;
     margin: 0;
+    font-size: 60px;
     font-size: 6.0rem;
 }
 
-header > .main-title > div > h2 {
+header>.main-title>div>h2 {
     font-style: italic;
+    font-size: 28px;
     font-size: 2.8rem;
 }
 
-main h1, main h2, main h3, main h4 {
+main h1,
+main h2,
+main h3,
+main h4 {
     width: 100%;
     max-width: 800px;
     margin: 32px auto;
 }
 
-main > .content {
+main>.content {
     width: 100%;
     margin: auto;
     padding: 12px;
 }
 
 .paragraphized-ul,
-main > .content p {
+main>.content p {
     width: 100%;
     max-width: 800px;
     margin: 24px auto;
 }
 
-.paragraphized-ul > li {
+.paragraphized-ul>li {
     margin: 12px;
 }
 
@@ -190,34 +246,34 @@ main > .content p {
     margin: 22px auto;
 }
 
-.submenu > ul {
+.submenu>ul {
     padding: 0;
     margin: 0;
 }
 
-.submenu > ul > li {
+.submenu>ul>li {
     list-style: none;
     margin: 24px;
     display: block;
     background-color: #F5F0EB;
     padding: 12px;
     border-radius: 8px;
+    font-size: 19px;
     font-size: 1.9rem;
     font-weight: bold;
 }
 
-.submenu > ul > li:nth-child(1),
-.submenu > ul > li:nth-child(3)
-{
+.submenu>ul>li:nth-child(1),
+.submenu>ul>li:nth-child(3) {
     margin-left: 68px;
 }
 
-.submenu > ul > li:nth-child(2),
-.submenu > ul > li:nth-child(4) {
+.submenu>ul>li:nth-child(2),
+.submenu>ul>li:nth-child(4) {
     margin-right: 68px;
 }
 
-.submenu > ul > li > a {
+.submenu>ul>li>a {
     display: block;
     text-decoration: none;
 }
@@ -234,7 +290,7 @@ footer {
     margin-top: 64px;
 }
 
-footer > div {
+footer>div {
     width: 100%;
     max-width: 800px;
     margin: auto;
@@ -262,36 +318,36 @@ footer a:hover {
 }
 
 .iban code {
-    background-color:  #292929;
+    background-color: #292929;
     padding: 4px;
     border-radius: 4px;
     color: #F5E9CE;
 }
 
-
-
 .blk {
     display: none;
 }
 
-
 @media screen and (max-width: 640px) {
     #top-bar {
-	min-height: 120px;
+        min-height: 120px;
     }
-    #top-bar > ul {
-	-ms-flex-direction: column;
-	flex-direction: column;
-	justify-content: center;
+    #top-bar>ul {
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     header {
-	top: 120px;
+        top: 120px;
     }
-    header > .main-title > div > h1 {
-	font-size: 3.0rem;
+    header>.main-title>div>h1 {
+        font-size: 3.0rem;
     }
-
-    header > .main-title > div > h2 {
-	font-size: 1.8rem;
+    header>.main-title>div>h2 {
+        font-size: 1.8rem;
     }
 }
